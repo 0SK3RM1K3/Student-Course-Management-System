@@ -56,18 +56,18 @@ public class Main {
 
                         System.out.println("Student added successfully!");
 
-                        //Delete Student 
-                        case 2:
+                    //Delete Student 
+                    case 2:
 
-                            System.out.println("Enter Student ID to delete:");
-                            String removeStudentById = scanner.nextLine();
+                        System.out.println("Enter Student ID to delete:");
+                        String removeStudentById = scanner.nextLine();
 
-                            boolean found = false;
+                        boolean found = false;
 
-                            for(int i = 0; i  < students.size(); i++){
-                                if(students.get(i).getId().equals(removeStudentById));
-                                found = true;
-                                break;
+                        for(int i = 0; i  < students.size(); i++){
+                            if(students.get(i).getId().equals(removeStudentById));
+                            found = true;
+                            break;
                             }
                         
                         if(!found){
@@ -75,23 +75,23 @@ public class Main {
                         }
                         break;
 
-                        //View Students
-                        case 3:
-                            if(students.isEmpty()){
-                                System.out.println("No students are in the system");
-                            } else{
-                                for(Student s : students){
-                                    System.out.println(s.getDetails());
+                    //View Students
+                     case 3:
+                        if(students.isEmpty()){
+                            System.out.println("No students are in the system");
+                        } else{
+                            for(Student s : students){
+                                System.out.println(s.getDetails());
                                 }
                             }
-                            break;
+                        break;
 
                             //Exit the program
-                            case 4: 
-                                running = false;
-                                break;
-                            default: 
-                            System.out.print("Invalid menu option");
+                        case 4: 
+                            running = false;
+                            break;
+                        default: 
+                        System.out.print("Invalid menu option");
                     }
                 }
             }
