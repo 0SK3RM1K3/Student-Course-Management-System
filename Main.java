@@ -56,6 +56,25 @@ public class Main {
 
                         System.out.println("Student added successfully!");
 
+                        //Delete Student 
+                        case 2:
+
+                            System.out.println("Enter Student ID to delete:");
+                            String removeStudentById = scanner.nextLine();
+
+                            boolean found = false;
+
+                            for(int i = 0; i  < students.size(); i++){
+                                if(students.get(i).getId().equals(removeStudentById));
+                                found = true;
+                                break;
+                            }
+                        
+                        if(!found){
+                            System.out.println("Student not found.");
+                        }
+                        break;
+                        
                 }
             }
         }
