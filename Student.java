@@ -11,4 +11,23 @@ public class Student extends Person {
         super(name, id, email);
         courses = new ArrayList<>();
     }
+
+    //add course function
+    public void addCourse(String course) {
+        courses.add(course);
+    }
+
+    //get course function
+    public ArrayList<String> getCourses() {
+        return courses;
+    }
+
+    //class specific behaviour for getDetails
+    @Override
+    public String getDetails() {
+        return "Student: " + getName() +
+               "\nID: " + getId() +
+               "\nEmail: " + getEmail() +
+               "\nCourses: " + courses;
+    }
 }
