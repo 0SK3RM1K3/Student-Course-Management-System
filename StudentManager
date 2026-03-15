@@ -10,3 +10,9 @@ public class StudentManager {
         students = new ArrayList<>();
     }
 }
+
+// add student
+public void addStudent(Student student) {
+    students.add(student);
+    System.out.println("Student added successfully.");
+}
