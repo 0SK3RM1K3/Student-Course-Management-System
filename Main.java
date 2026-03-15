@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args){
 
-        ArrayList<Student> students = new ArrayList<>();
-
+        StudentManager manager = new StudentManager();
+        
         try (Scanner scanner = new Scanner(System.in)){
 
             boolean running = true;
