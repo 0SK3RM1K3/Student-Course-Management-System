@@ -8,61 +8,62 @@ public class StudentManager {
     public StudentManager() {
         students = new ArrayList<>();
     }
-}
 
-// add student
-public void addStudent(Student student) {
-    students.add(student);
-    System.out.println("Student added successfully.");
-}
 
-// display all students
-public void displayAllStudents() {
-    if (students.size() == 0) {
-        System.out.println("No students in the system.");
-        return;
+    // add student
+    public void addStudent(Student student) {
+        students.add(student);
+        System.out.println("Student added successfully.");
     }
 
-    System.out.println("\n---Student List---");
+    // display all students
+    public void displayAllStudents() {
+        if (students.size() == 0) {
+            System.out.println("No students in the system.");
+            return;
+        }
 
-    for (Student student : students) {
-        System.out.println(student.getDetails());
-    }
-}
+        System.out.println("\n---Student List---");
 
-// search student by ID
-public Student findStudentById(String id) {
-    for (Student student : students) {
-
-        if (student.getId().equalsIgnoreCase(id)) {
-            return student;
+        for (Student student : students) {
+            System.out.println(student.getDetails());
         }
     }
-    return null;
-}
 
-// remove student by ID
-public boolean removeStudentById(String id) {
-    for (int i = 0; i < students.size(); i++) {
+    // search student by ID
+    public Student findStudentById(String id) {
+        for (Student student : students) {
 
-        if (students.get(i).getId().equalsIgnoreCase(id)) {
-
-            students.remove(i);
-            return true;
+            if (student.getId().equalsIgnoreCase(id)) {
+                return student;
+            }
         }
+        return null;
     }
-    return false;
-}
 
-// assign course to a student
-public void assignCourse(String id, String course) {
-    Student student = findStudentById(id);
+    // remove student by ID
+    public boolean removeStudentById(String id) {
+        for (int i = 0; i < students.size(); i++) {
 
-    if (student != null) {
-        student.addCourse(course);
-        System.out.println("Course added.");
+            if (students.get(i).getId().equalsIgnoreCase(id)) {
+
+                students.remove(i);
+                return true;
+            }
+        }
+        return false;
     }
-    else {
-        System.out.println("Student not found.");
+
+    // assign course to a student
+    public void assignCourse(String id, String course) {
+        Student student = findStudentById(id);
+
+        if (student != null) {
+            student.addCourse(course);
+            System.out.println("Course added.");
+        }
+        else {
+            System.out.println("Student not found.");
+        }
     }
 }
