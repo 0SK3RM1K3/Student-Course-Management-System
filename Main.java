@@ -27,20 +27,40 @@ public class Main {
                     //Add student 
                     case 1:
 
-                        System.out.println("Enter name:");
-                        String name = scanner.nextLine();
-
-                        System.out.println("Enter Student ID (9 digits):");
-                        String id = scanner.nextLine();
-
-                        if(!Validator.isValidStudentId(id)){
-                            throw new IllegalArgumentException("Student ID must be exactly 9 digits");
+                        String name = "";
+                        while(true){
+                            System.out.println("Enter name");
+                            name = scanner.nextLine();
+                            if(Validator.isValidName(name)){
+                                break; //Valid name
+                            } else{
+                                System.out.println("Invalid name. Only letters and spaces are allowed. Please try again");
+                            }
                         }
-                        System.out.println("Enter Email:");
-                        String email = scanner.nextLine();
 
-                        if(!Validator.isValidEmail(email)){
-                            throw new IllegalArgumentException("Invalid email format.");
+                       String id = "";
+                       while(true){
+                        System.out.println("Enter Student ID(9 digits):");
+                        id = scanner.nextLine();
+                        if(Validator.isValidStudentId(id)){
+                            break; //Valid ID, exit loop
+                        }
+                        else{
+                            System.out.println("Invalid Student ID. It must be 9 digits.");
+                        }
+                    }
+
+                       
+                        String email = "";
+                        while(true){
+                            System.out.println("Enter Email:");
+                            email = scanner.nextLine();
+                            if(Validator.isValidEmail(email)){
+                                break; //Valid email exit loop
+                            }
+                            else{
+                                System.out.println("Invalid Email format. Try again.");
+                            }
                         }
 
                         Student student = new Student(name, id, email);

@@ -10,4 +10,8 @@ public class Validator{
     public static boolean isValidEmail(String email){
         return Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", email);
     }
+    //Validate name(Letters and spaces only, at least two characters
+    public static boolean isValidName(String name){
+        return Pattern.matches("[A-za-z ]{2,}", name.trim());
+    }
 }
