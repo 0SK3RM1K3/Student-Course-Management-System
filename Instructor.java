@@ -8,4 +8,12 @@ public class Instructor extends Person {
         super(name, id, email);
         this.department = department;
     }
+
+    @Override
+    public String getDetails() {
+        return "Instructor: " + getName() +
+               "\nID: " + getId() +
+               "\nEmail: " + getEmail() +
+               "\nDepartment: " + department;
+    }
 }
