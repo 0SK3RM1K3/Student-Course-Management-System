@@ -55,7 +55,7 @@ public class Main {
                         students.add(student);
 
                         System.out.println("Student added successfully!");
-
+                        break;
                         //Delete Student 
                         case 2:
 
@@ -76,7 +76,7 @@ public class Main {
                         break;
 
                         //View Students
-                        case 3:
+                         case 3:
                             if(students.isEmpty()){
                                 System.out.println("No students are in the system");
                             } else{
@@ -87,23 +87,23 @@ public class Main {
                             break;
 
                             //Exit the program
-                            case 4: 
-                                running = false;
-                                break;
-                            default: 
-                            System.out.print("Invalid menu option");
+                        case 4: 
+                            running = false;
+                            break;
+                        default: 
+                        System.out.print("Invalid menu option");
                     }
                 }
             }
         catch(IllegalArgumentException e){
             System.out.println("Validation Error:" + e.getMessage());
-        }
-       catch(Exception e){
+         }
+        catch(Exception e){
         System.out.println("Unexpected error: " + e.getMessage());
-       }
-       finally{
+        }
+        finally{
         System.out.println("Thank you for using our program!");
-       }
+        }
     
 
         
