@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class StudentManager {
+
+    // arraylist to store students
+    private ArrayList<Student> students;
+
+    // constructor
+    public StudentManager() {
+        students = new ArrayList<>();
+    }
+}
