@@ -16,3 +16,18 @@ public void addStudent(Student student) {
     students.add(student);
     System.out.println("Student added successfully.");
 }
+
+// display all students
+public void displayAllStudents() {
+
+    if (students.size() == 0) {
+        System.out.println("No students in the system.");
+        return;
+    }
+
+    System.out.println("\n--- Student List ---");
+
+    for (Student student : students) {
+        System.out.println(student.getDetails());
+    }
+}
