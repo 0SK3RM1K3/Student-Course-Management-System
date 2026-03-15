@@ -53,17 +53,4 @@ public class StudentManager {
         }
         return false;
     }
-
-    // assign course to a student
-    public void assignCourse(String id, String course) {
-        Student student = findStudentById(id);
-
-        if (student != null) {
-            student.addCourse(course);
-            System.out.println("Course added.");
-        }
-        else {
-            System.out.println("Student not found.");
-        }
-    }
 }
