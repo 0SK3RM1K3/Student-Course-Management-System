@@ -1,0 +1,9 @@
+Description -
+  A simple application that allows users to input student information and outputs the details at the end. Application includes oop classes, validation and list management.
+
+Group Reflection -
+  Tyson and Anthony met at Anthony's house and Mat joined via Phone call and we made a joint effort to figure out how Github Forks work. This was the biggest issue we encountered. With assistance
+  from google and further research we were able to create a new repository and seperate branches so we can individually work on our parts. Through verbal communication we created our files in a way 
+  that works in unison. We discovered that the assinment only asks for student details and output. For improvements in the future we agreed that including an option to choose either Instructor or
+  Student then capture the info of each as well as an option at the end for which output you would like displayed. We learned a lot through this assignment. We cemented our knowledge of oop class
+  building, validation through regex and list management skills. We also learned a lot about Github and how to properly collaberate on a project.
