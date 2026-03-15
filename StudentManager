@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class StudentManager {
-
     // arraylist to store students
     private ArrayList<Student> students;
 
@@ -19,7 +18,6 @@ public void addStudent(Student student) {
 
 // display all students
 public void displayAllStudents() {
-
     if (students.size() == 0) {
         System.out.println("No students in the system.");
         return;
@@ -31,3 +29,15 @@ public void displayAllStudents() {
         System.out.println(student.getDetails());
     }
 }
+
+// search student by ID
+public Student findStudentById(String id) {
+    for (Student student : students) {
+
+        if (student.getId().equalsIgnoreCase(id)) {
+            return student;
+        }
+    }
+    return null;
+}
+
