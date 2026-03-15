@@ -86,9 +86,28 @@ public class Main {
                             }
                             break;
 
-                            
+                            //Exit the program
+                            case 4: 
+                                running = false;
+                                break;
+                            default: 
+                            System.out.print("Invalid menu option");
+                    }
                 }
             }
+        catch(IllegalArgumentException e){
+            System.out.println("Validation Error:" + e.getMessage());
         }
+       catch(Exception e){
+        System.out.println("Unexpected error: " + e.getMessage());
+       }
+       finally{
+        System.out.println("Thank you for using our program!");
+       }
+    
+
+        
     }
+
 }
+
