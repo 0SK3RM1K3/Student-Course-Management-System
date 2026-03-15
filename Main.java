@@ -23,5 +23,41 @@ public class Main {
 
                 int choice = Integer.parseInt(scanner.nextLine());
 
+                switch(choice){
 
+                    //Add student 
+                    case 1:
+
+                        System.out.println("Enter name:");
+                        String name = scanner.nextLine();
+
+                        System.out.println("Enter Student ID (9 digits):");
+                        String id = scanner.nextLine();
+
+                        if(!Validator.isValidStudentId(id)){
+                            throw new IllegalArgumentException("Student ID must be exactly 9 digits");
+                        }
+                        System.out.println("Enter Email:");
+                        String email = scanner.nextLine();
+
+                        if(!Validator.isValidEmail(email)){
+                            throw new IllegalArgumentException("Invalid email format.");
+                        }
+
+                        Student student = new Student(name, id, email);
+                        
+                        System.out.println("Enter a course:");
+                        student.addCourse(scanner.nextLine());
+
+                        System.out.println("Please enter another course:");
+                        student.addCourse(scanner.nextLine());
+
+                        students.add(student);
+
+                        System.out.println("Student added successfully!");
+
+                }
             }
+        }
+    }
+}
