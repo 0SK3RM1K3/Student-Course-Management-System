@@ -41,3 +41,15 @@ public Student findStudentById(String id) {
     return null;
 }
 
+// remove student by ID
+public boolean removeStudentById(String id) {
+    for (int i = 0; i < students.size(); i++) {
+
+        if (students.get(i).getId().equalsIgnoreCase(id)) {
+
+            students.remove(i);
+            return true;
+        }
+    }
+    return false;
+}
