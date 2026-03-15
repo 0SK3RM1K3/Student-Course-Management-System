@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args){
 
-        ArrayList<Student> students = new ArrayList<>();
+        StudentManager manager = new StudentManager();
 
         try (Scanner scanner = new Scanner(System.in)){
 
@@ -52,46 +52,38 @@ public class Main {
                         System.out.println("Please enter another course:");
                         student.addCourse(scanner.nextLine());
 
-                        students.add(student);
+                        manager.addStudent(student);
 
                         System.out.println("Student added successfully!");
 
+                        break;
+
                     //Delete Student 
                     case 2:
-
                         System.out.println("Enter Student ID to delete:");
-                        String removeStudentById = scanner.nextLine();
+                        String deleteId = scanner.nextLine();
 
-                        boolean found = false;
-
-                        for(int i = 0; i  < students.size(); i++){
-                            if(students.get(i).getId().equals(removeStudentById));
-                            found = true;
-                            break;
-                            }
-                        
-                        if(!found){
-                            System.out.println("Student not found.");
+                        if(manager.removeStudentById(deleteId)){
+                            System.out.println("Student removed.");
                         }
+                        else{
+                            System.out.println("Student not found");
+                        }
+
+                    
                         break;
 
                     //View Students
-                     case 3:
-                        if(students.isEmpty()){
-                            System.out.println("No students are in the system");
-                        } else{
-                            for(Student s : students){
-                                System.out.println(s.getDetails());
-                                }
-                            }
+                    case 3:
+                        manager.displayAllStudents();
                         break;
 
                             //Exit the program
-                        case 4: 
-                            running = false;
-                            break;
-                        default: 
-                        System.out.print("Invalid menu option");
+                    case 4: 
+                        running = false;
+                        break;
+                    default: 
+                    System.out.print("Invalid menu option");
                     }
                 }
             }
