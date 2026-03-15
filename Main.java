@@ -4,9 +4,8 @@ public class Main {
 
     public static void main(String[] args){
         
-        Scanner scanner = new Scanner(System.in);
 
-        try {
+        try (Scanner scanner = new Scanner(System.in)){
 
             System.out.println("Enter name:");
             String name = scanner.nextLine();
@@ -40,9 +39,17 @@ public class Main {
             System.out.println("\nStudent Details:");
             System.out.println(student.getDetails());
 
+        }   //Catches any validaton errors
+            catch(IllegalArgumentException e) {
+            System.out.println("Validation Error: " + e.getMessage());
         }
-
-    
+            //Catches any unexpected errors
+            catch(Exception e){
+                System.out.println("Unexpected error:" + e.getMessage());
+        }
+            finally{
+                System.out.println("Thank you for using our program!");
+            }
         
     }
     
