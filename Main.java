@@ -25,7 +25,25 @@ public class Main {
             if (!Validator.isValidEmail(email)){
                 throw new IllegalArgumentException("Invalid email format.");
             }
+
+            //Create new student 
+
+            Student student = new Student(name, id, email);
+
+            System.out.println("Enter a course:");
+            student.addCourse(scanner.nextLine());
+
+            System.out.println("Please enter another course:");
+            student.addCourse(scanner.nextLine());
+
+            //Print out the student details
+            System.out.println("\nStudent Details:");
+            System.out.println(student.getDetails());
+
         }
+
+    
+        
     }
     
 }
