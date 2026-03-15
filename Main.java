@@ -74,7 +74,19 @@ public class Main {
                             System.out.println("Student not found.");
                         }
                         break;
-                        
+
+                        //View Students
+                        case 3:
+                            if(students.isEmpty()){
+                                System.out.println("No students are in the system");
+                            } else{
+                                for(Student s : students){
+                                    System.out.println(s.getDetails());
+                                }
+                            }
+                            break;
+
+                            
                 }
             }
         }
