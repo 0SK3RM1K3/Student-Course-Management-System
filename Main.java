@@ -53,7 +53,6 @@ public class Main {
 
                         manager.addStudent(student);
 
-                        System.out.println("Student added successfully!");
 
                         break;
 
@@ -77,7 +76,7 @@ public class Main {
                         manager.displayAllStudents();
                         break;
 
-                            //Exit the program
+                    //Exit the program
                     case 4: 
                         running = false;
                         break;
