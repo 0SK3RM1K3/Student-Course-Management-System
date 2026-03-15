@@ -23,7 +23,7 @@ public void displayAllStudents() {
         return;
     }
 
-    System.out.println("\n--- Student List ---");
+    System.out.println("\n---Student List---");
 
     for (Student student : students) {
         System.out.println(student.getDetails());
@@ -52,4 +52,17 @@ public boolean removeStudentById(String id) {
         }
     }
     return false;
+}
+
+// assign course to a student
+public void assignCourse(String id, String course) {
+    Student student = findStudentById(id);
+
+    if (student != null) {
+        student.addCourse(course);
+        System.out.println("Course added.");
+    }
+    else {
+        System.out.println("Student not found.");
+    }
 }
