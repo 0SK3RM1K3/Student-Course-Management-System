@@ -4,7 +4,7 @@ public class Validator{
 
     //Validate student ID (Must be exactly 9 digits)
     public static boolean isValidStudentId(String id){
-        return Pattern.matches("\\d{0}", id);
+        return Pattern.matches("\\d{9}", id);
     }
     // Validate Email format 
     public static boolean isValidEmail(String email){
